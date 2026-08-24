@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#150f33">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <title>Who is the Imposter?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="langToggle" class="lang-toggle" type="button">عربي</button>
+
+  <main id="app">
+
+    <!-- ============ SETUP ============ -->
+    <section id="screen-setup" class="screen active">
+      <header class="setup-head">
+        <img src="logo.png" alt="Who is the Imposter?" class="game-logo floaty">
+        <h1 class="game-title" data-i18n="title"></h1>
+        <p class="tagline" data-i18n="tagline"></p>
+      </header>
+
+      <div class="panel">
+        <div class="row-between">
+          <span class="label" data-i18n="players"></span>
+          <div class="stepper">
+            <button id="btnMinus" class="btn-round" type="button" aria-label="-">&minus;</button>
+            <span id="playerCountVal" class="count-val">4</span>
+            <button id="btnPlus" class="btn-round" type="button" aria-label="+">+</button>
+          </div>
+        </div>
+        <div id="nameInputs" class="name-inputs"></div>
+      </div>
+
+      <div class="panel">
+        <span class="label" data-i18n="categories"></span>
+        <div id="categoryGrid" class="cat-grid"></div>
+      </div>
+
+      <button id="btnStart" class="btn btn-primary btn-big" type="button" data-i18n="start"></button>
+    </section>
+
+    <!-- ============ PASS DEVICE ============ -->
+    <section id="screen-pass" class="screen">
+      <p id="passStep" class="step-note"></p>
+      <div id="passDots" class="dots"></div>
+      <div class="big-avatar floaty">👀</div>
+      <p class="pass-label" data-i18n="passTo"></p>
+      <h2 id="passName" class="pass-name"></h2>
+      <button id="btnShowCard" class="btn btn-primary btn-big" type="button" data-i18n="tapShow"></button>
+    </section>
+
+    <!-- ============ CARD REVEAL ============ -->
+    <section id="screen-card" class="screen">
+      <p id="cardStep" class="step-note"></p>
+      <div id="flipCard" class="card">
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="stamp" data-i18n="frontStamp"></span>
+            <span class="q-mark">❓</span>
+            <span class="tap-hint" data-i18n="tapToReveal"></span>
+          </div>
+          <div id="cardBack" class="card-face card-back">
+            <span id="cardBadge" class="badge"></span>
+            <span id="cardVisual" class="visual"></span>
+            <span id="cardLead" class="lead"></span>
+            <span id="cardItemName" class="item-name"></span>
+            <span id="cardDetail" class="detail-text hidden"></span>
+            <span id="cardCatChip" class="cat-chip"></span>
+            <p id="cardHintText" class="hint-text"></p>
+          </div>
+        </div>
+      </div>
+      <button id="btnHideCard" class="btn btn-secondary btn-big hidden" type="button" data-i18n="hideNext"></button>
+    </section>
+
+    <!-- ============ DISCUSSION ============ -->
+    <section id="screen-discussion" class="screen">
+      <div class="big-avatar floaty">🗣️</div>
+      <h2 class="screen-title" data-i18n="discussionTitle"></h2>
+      <p class="tip" data-i18n="discussionTip"></p>
+
+      <div class="chips" id="durChips">
+        <button class="chip" type="button" data-min="30">30s</button>
+        <button class="chip selected" type="button" data-min="60">60s</button>
+        <button class="chip" type="button" data-min="120">120s</button>
+      </div>
+
+      <div id="timerDisplay" class="timer-display">01:00</div>
+      <div class="timer-track"><div id="timerBar" class="timer-bar"></div></div>
+
+      <div class="row-gap">
+        <button id="btnTimerToggle" class="btn btn-primary" type="button" data-i18n="startTimer"></button>
+        <button id="btnGoVote" class="btn btn-secondary" type="button" data-i18n="goToVote"></button>
+      </div>
+    </section>
+
+    <!-- ============ VOTING ============ -->
+    <section id="screen-voting" class="screen">
+      <h2 class="screen-title" data-i18n="votingTitle"></h2>
+      <p class="tip" data-i18n="votingTip"></p>
+      <div id="voteList" class="vote-list"></div>
+      <button id="btnReveal" class="btn btn-danger btn-big" type="button" data-i18n="revealBtn"></button>
+    </section>
+
+    <!-- ============ RESULT ============ -->
+    <section id="screen-result" class="screen">
+      <p class="reveal-label" data-i18n="imposterWas"></p>
+      <h2 id="resultImposter" class="imposter-name"></h2>
+
+      <div class="result-element panel">
+        <span id="resultCatChip" class="cat-chip"></span>
+        <span id="resultElementEmoji" class="visual-xl"></span>
+        <p class="reveal-sub" data-i18n="secretWas"></p>
+        <span id="resultElementName" class="item-name"></span>
+        <p id="resultElementDetail" class="detail-line"></p>
+      </div>
+
+      <p id="resultVotesLine" class="votes-line"></p>
+      <div id="recapRow" class="recap-row"></div>
+
+      <div class="row-column">
+        <button id="btnAgain" class="btn btn-primary btn-big" type="button" data-i18n="playAgain"></button>
+        <button id="btnNewSetup" class="btn btn-secondary" type="button" data-i18n="newGame"></button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
