@@ -3,7 +3,7 @@
    with zero network. Version bump forces a refresh of old assets. */
 'use strict';
 
-const CACHE = 'imposter-v2';
+const CACHE = 'imposter-v4';
 const ASSETS = [
   './',
   './index.html',

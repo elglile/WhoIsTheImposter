@@ -101,10 +101,10 @@ const CATEGORIES = {
       { en: 'Diego Maradona', ar: 'دييغو مارادونا', emoji: '🇦🇷', iso: 'ar', detail: { en: 'Argentine genius of the 1986 World Cup', ar: 'عبقري الأرجنتين في مونديال 1986' } },
       { en: 'Zinedine Zidane', ar: 'زين الدين زيدان', emoji: '🇫🇷', iso: 'fr', detail: { en: 'Elegant French playmaker and later coach', ar: 'صانع الألعاب الفرنسي الأنيق ومدرب لاحقًا' } },
       { en: 'Ronaldinho', ar: 'رونالدينيو', emoji: '🇧🇷', iso: 'br', detail: { en: 'Smiling Brazilian who played with joy', ar: 'البرازيلي المبتسم الذي لعب بمرح' } },
-      { en: 'Harry Kane', ar: 'هاري كين', emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', iso: 'gb-eng', detail: { en: 'England captain and clinical finisher', ar: 'قائد المنتخب الإنجليزي وقناص المناطق' } },
+      { en: 'Harry Kane', ar: 'هاري كين', emoji: '🇬🇧', iso: 'gb-eng', detail: { en: 'England captain and clinical finisher', ar: 'قائد المنتخب الإنجليزي وقناص المناطق' } },
       { en: 'Kevin De Bruyne', ar: 'كيفن دي بروين', emoji: '🇧🇪', iso: 'be', detail: { en: 'Belgian king of assists', ar: 'ملك التمريرات الحاسمة البلجيكي' } },
       { en: 'Vinícius Jr', ar: 'فينيسيوس جونيور', emoji: '🇧🇷', iso: 'br', w: 'Vinícius Júnior', detail: { en: 'Real Madrid’s dazzling Brazilian winger', ar: 'الجناح البرازيلي اللامع في ريال مدريد' } },
-      { en: 'Jude Bellingham', ar: 'جود بيلينجهام', emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', iso: 'gb-eng', detail: { en: 'Young English midfield superstar', ar: 'نجم خط الوسط الإنجليزي الشاب' } },
+      { en: 'Jude Bellingham', ar: 'جود بيلينجهام', emoji: '🇬🇧', iso: 'gb-eng', detail: { en: 'Young English midfield superstar', ar: 'نجم خط الوسط الإنجليزي الشاب' } },
       { en: 'Sadio Mané', ar: 'ساديو ماني', emoji: '🇸🇳', iso: 'sn', detail: { en: 'Senegalese winger famous for speed', ar: 'جناح السنغال المشهور بسرعته' } },
       { en: 'Riyad Mahrez', ar: 'رياض محرز', emoji: '🇩🇿', iso: 'dz', detail: { en: 'Algerian wizard of Manchester City', ar: 'ساحر الجزائر في مانشستر سيتي' } },
       { en: 'Robert Lewandowski', ar: 'روبرت ليفاندوفسكي', emoji: '🇵🇱', iso: 'pl', detail: { en: 'Polish striker with a scoring machine', ar: 'الهداف البولندي صاحب الأرقام القياسية' } },
@@ -193,13 +193,13 @@ const CATEGORIES = {
     icon: '🎯',
     label: { en: 'Activities', ar: 'أنشطة' },
     items: [
-      { en: 'Football', ar: 'كرة القدم', emoji: '⚽', detail: { en: 'Team sport played with one ball and two goals', ar: 'لعبة جماعية بكرة واحدة ومرميين' } },
+      { en: 'Football', ar: 'كرة القدم', emoji: '⚽', w: 'Association football', detail: { en: 'Team sport played with one ball and two goals', ar: 'لعبة جماعية بكرة واحدة ومرميين' } },
       { en: 'Basketball', ar: 'كرة السلة', emoji: '🏀', detail: { en: 'Shooting a ball through raised hoops', ar: 'رمي الكرة داخل سلّات مرتفعة' } },
       { en: 'Swimming', ar: 'السباحة', emoji: '🏊', detail: { en: 'Moving through water using arms and legs', ar: 'التحرك داخل الماء بالذراعين والساقين' } },
       { en: 'Camping', ar: 'التخييم', emoji: '🏕️', detail: { en: 'Sleeping in tents out in nature', ar: 'النوم في خيام وسط الطبيعة' } },
       { en: 'Fishing', ar: 'الصيد', emoji: '🎣', detail: { en: 'Catching fish patiently with a rod', ar: 'اصطياد السمك بصبر وبالصنارة' } },
       { en: 'Party', ar: 'الحفلة', emoji: '🎉', detail: { en: 'Gathering with music, dancing and fun', ar: 'تجمع بالموسيقى والرقص والمرح' } },
-      { en: 'Dancing', ar: 'الرقص', emoji: '💃', detail: { en: 'Moving your body to the rhythm of music', ar: 'تحريك الجسم بإيقاع الموسيقى' } },
+      { en: 'Dancing', ar: 'الرقص', emoji: '💃', w: 'Dance', detail: { en: 'Moving your body to the rhythm of music', ar: 'تحريك الجسم بإيقاع الموسيقى' } },
       { en: 'Cooking', ar: 'الطبخ', emoji: '🍳', detail: { en: 'Preparing food in the kitchen', ar: 'تحضير الطعام في المطبخ' } },
       { en: 'Painting', ar: 'الرسم', emoji: '🎨', detail: { en: 'Creating art with brushes and colors', ar: 'صنع الفن بالفرشاة والألوان' } },
       { en: 'Singing', ar: 'الغناء', emoji: '🎤', detail: { en: 'Making music with your own voice', ar: 'صناعة الموسيقى بصوتك وحده' } },
@@ -207,11 +207,11 @@ const CATEGORIES = {
       { en: 'Cycling', ar: 'ركوب الدراجات', emoji: '🚴', detail: { en: 'Riding bikes on two wheels', ar: 'قيادة الدراجات ذات العجلتين' } },
       { en: 'Yoga', ar: 'اليوغا', emoji: '🧘', detail: { en: 'Calm stretching exercise for body and mind', ar: 'تمارين هادئة لمرونة الجسم وصفاء الذهن' } },
       { en: 'Chess', ar: 'الشطرنج', emoji: '♟️', detail: { en: 'Strategy board battle of kings and queens', ar: 'معركة ذكية على الرقعة بين الملوك والوزراء' } },
-      { en: 'Video Gaming', ar: 'ألعاب الفيديو', emoji: '🎮', detail: { en: 'Playing electronic games on screens', ar: 'لعب الألعاب الإلكترونية على الشاشات' } },
-      { en: 'Reading', ar: 'القراءة', emoji: '📖', detail: { en: 'Traveling into stories through books', ar: 'السفر إلى الحكايات عبر الكتب' } },
+      { en: 'Video Gaming', ar: 'ألعاب الفيديو', emoji: '🎮', w: 'Video game', detail: { en: 'Playing electronic games on screens', ar: 'لعب الألعاب الإلكترونية على الشاشات' } },
+      { en: 'Reading', ar: 'القراءة', emoji: '📖', w: 'Book', detail: { en: 'Traveling into stories through books', ar: 'السفر إلى الحكايات عبر الكتب' } },
       { en: 'Gardening', ar: 'البستنة', emoji: '🌱', detail: { en: 'Growing plants, flowers and vegetables', ar: 'زراعة النباتات والزهور والخضار' } },
       { en: 'Shopping', ar: 'التسوق', emoji: '🛍️', detail: { en: 'Buying things from malls and markets', ar: 'شراء الأغراض من المولات والأسواق' } },
-      { en: 'Traveling', ar: 'السفر', emoji: '✈️', detail: { en: 'Discovering new places far from home', ar: 'اكتشاف أماكن جديدة بعيدة عن الوطن' } },
+      { en: 'Traveling', ar: 'السفر', emoji: '✈️', w: 'Travel', detail: { en: 'Discovering new places far from home', ar: 'اكتشاف أماكن جديدة بعيدة عن الوطن' } },
       { en: 'Photography', ar: 'التصوير', emoji: '📸', detail: { en: 'Capturing special moments with a camera', ar: 'توثيق اللحظات الخاصة بالكاميرا' } }
     ]
   },
@@ -509,7 +509,6 @@ function decodeSecret(encoded) {
    falls back to the emoji.
    ------------------------------------------------------------ */
 const FLAG_CDN = 'https://flagcdn.com/w320/';
-const WIKI_SKIP = new Set(['activities']); // emoji says it best
 
 let thumbCache = {};
 try { thumbCache = JSON.parse(localStorage.getItem('imposter-thumbs') || '{}'); } catch (_) {}
@@ -557,10 +556,8 @@ async function wikiThumb(title) {
 function resolveVisual(item, catKey) {
   return (async () => {
     if (catKey === 'countries' && item.iso) return { img: FLAG_CDN + item.iso + '.png' };
-    if (!WIKI_SKIP.has(catKey)) {
-      const url = await wikiThumb(item.w || item.en);
-      if (url) return { img: url };
-    }
+    const url = await wikiThumb(item.w || item.en);
+    if (url) return { img: url };
     if (item.iso) return { img: FLAG_CDN + item.iso + '.png' }; // player nationality flag
     return { emoji: item.emoji };
   })();
@@ -568,6 +565,7 @@ function resolveVisual(item, catKey) {
 
 function paintVisual(container, item, visual) {
   container.textContent = '';
+  container.classList.remove('hidden');
   if (visual.img) {
     const im = document.createElement('img');
     im.className = 'visual-img';
@@ -790,6 +788,7 @@ function renderCardText() {
       });
     }
     $('#cardLead').textContent = t('secretIs');
+    $('#cardLead').classList.remove('hidden');
     $('#cardItemName').textContent = element[lang];
     $('#cardItemName').classList.remove('hidden');
     detailEl.textContent = element.detail[lang];
@@ -801,6 +800,7 @@ function renderCardText() {
   } else {
     $('#cardVisual').textContent = gotHint ? '🕵️' : '🤫';
     $('#cardLead').textContent = t('youAreImposter');
+    $('#cardLead').classList.remove('hidden');
     $('#cardItemName').textContent = '';
     $('#cardItemName').classList.add('hidden');
     // never leak the element or its detail to the imposter
