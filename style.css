@@ -3,19 +3,57 @@
    Mobile-first · dark neon theme · RTL-ready
    ============================================================ */
 
+/* ---------- Theme tokens ---------- */
+
 :root {
+  color-scheme: dark;
+  /* structural */
+  --radius: 22px;
+  /* dark palette */
   --bg-1: #150f33;
   --bg-2: #2a1454;
+  --app-bg:
+    radial-gradient(900px 500px at 85% -10%, rgba(255, 94, 126, 0.22), transparent 60%),
+    radial-gradient(800px 600px at -15% 110%, rgba(45, 212, 191, 0.18), transparent 60%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
   --panel: rgba(255, 255, 255, 0.06);
   --panel-border: rgba(255, 255, 255, 0.12);
+  --glass: rgba(21, 15, 51, 0.75);
+  --input-bg: rgba(0, 0, 0, 0.25);
+  --track: rgba(255, 255, 255, 0.12);
   --text: #f4f1ff;
   --muted: #b9b3d9;
   --accent: #ff5e7e;
   --accent-2: #ffc93c;
   --teal: #2dd4bf;
   --danger: #ff4d5e;
-  --radius: 22px;
+  --danger-soft: #ff97a2;
+  --stamp: #ffc93c;              /* card stamp stays golden on its dark face */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Light mode — follows the device, overridable via [data-theme] */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-1: #f6f2ff;
+  --bg-2: #ffeef3;
+  --app-bg:
+    radial-gradient(900px 500px at 85% -10%, rgba(255, 94, 126, 0.16), transparent 60%),
+    radial-gradient(800px 600px at -15% 110%, rgba(13, 148, 136, 0.13), transparent 60%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  --panel: rgba(255, 255, 255, 0.72);
+  --panel-border: rgba(39, 29, 82, 0.14);
+  --glass: rgba(255, 255, 255, 0.85);
+  --input-bg: rgba(39, 29, 82, 0.06);
+  --track: rgba(39, 29, 82, 0.12);
+  --text: #271d52;
+  --muted: #6f6695;
+  --accent: #e8476b;
+  --accent-2: #b57a05;
+  --teal: #0d9488;
+  --danger: #dc2f4b;
+  --danger-soft: #cf3550;
+  --shadow: 0 10px 30px rgba(58, 34, 120, 0.16);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,10 +65,7 @@ body {
   min-height: 100dvh;
   font-family: "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", Tahoma, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(900px 500px at 85% -10%, rgba(255, 94, 126, 0.22), transparent 60%),
-    radial-gradient(800px 600px at -15% 110%, rgba(45, 212, 191, 0.18), transparent 60%),
-    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  background: var(--app-bg);
   background-attachment: fixed;
   display: flex;
   justify-content: center;
@@ -46,23 +81,27 @@ button {
 
 .hidden { display: none !important; }
 
-/* ---------- Language toggle ---------- */
-.lang-toggle {
+/* ---------- Quick actions (theme + language) ---------- */
+.quick-actions {
   position: fixed;
   inset-inline-end: 16px;
   top: 16px;
   z-index: 20;
+  display: flex;
+  gap: 8px;
+}
+.action-pill {
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid var(--panel-border);
-  background: rgba(21, 15, 51, 0.75);
+  background: var(--glass);
   backdrop-filter: blur(6px);
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, border-color 0.15s ease;
 }
-.lang-toggle:hover { transform: scale(1.06); border-color: var(--accent); }
+.action-pill:hover { transform: scale(1.06); border-color: var(--accent); }
 
 /* ---------- Layout / screens ---------- */
 #app {
@@ -155,7 +194,7 @@ button {
   padding: 13px 14px;
   border-radius: 14px;
   border: 1px solid var(--panel-border);
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--input-bg);
   color: var(--text);
   font-size: 1rem;
   outline: none;
@@ -235,7 +274,7 @@ input::placeholder { color: var(--muted); }
 .dot {
   width: 9px; height: 9px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--track);
 }
 .dot.done { background: var(--teal); }
 .dot.current { background: var(--accent); transform: scale(1.25); }
@@ -299,8 +338,8 @@ input::placeholder { color: var(--muted); }
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.28em;
-  color: var(--accent-2);
-  border: 2px dashed var(--accent-2);
+  color: var(--stamp);
+  border: 2px dashed var(--stamp);
   border-radius: 8px;
   padding: 6px 12px;
   opacity: 0.9;
@@ -419,7 +458,7 @@ input::placeholder { color: var(--muted); }
   max-width: 340px;
   height: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--track);
   overflow: hidden;
 }
 .timer-bar {
@@ -480,7 +519,7 @@ input::placeholder { color: var(--muted); }
 }
 .vote-btn:active { transform: scale(0.88); }
 .vote-plus { background: rgba(45, 212, 191, 0.2); color: var(--teal); }
-.vote-minus { background: rgba(255, 77, 94, 0.18); color: #ff97a2; }
+.vote-minus { background: rgba(255, 77, 94, 0.18); color: var(--danger-soft); }
 
 /* ---------- Result ---------- */
 .reveal-label { color: var(--muted); font-size: 1.05rem; margin-top: 22px; }
@@ -523,7 +562,7 @@ input::placeholder { color: var(--muted); }
 .recap-chip.is-imposter {
   border-color: var(--danger);
   background: rgba(255, 77, 94, 0.16);
-  color: #ffb3bb;
+  color: var(--danger-soft);
 }
 
 /* ---------- Animations ---------- */

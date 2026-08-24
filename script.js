@@ -898,6 +898,40 @@ function playAgainSameCrew() {
 }
 
 /* ============================================================
+   Theme (light / dark) — follows device, manual override saved
+   ============================================================ */
+
+const THEME_KEY = 'imposter-theme';
+const THEME_COLORS = { dark: '#150f33', light: '#f6f2ff' };
+
+function applyTheme(mode) {
+  document.documentElement.setAttribute('data-theme', mode);
+  $('#themeToggle').textContent = mode === 'light' ? '🌙' : '☀️';
+  document.querySelector('meta[name="theme-color"]')
+    ?.setAttribute('content', THEME_COLORS[mode]);
+}
+
+let theme = localStorage.getItem(THEME_KEY);
+if (theme !== 'light' && theme !== 'dark') {
+  theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+applyTheme(theme);
+
+$('#themeToggle').addEventListener('click', () => {
+  theme = theme === 'light' ? 'dark' : 'light';
+  localStorage.setItem(THEME_KEY, theme);
+  applyTheme(theme);
+});
+
+/* Keep following the device until the user picks a side manually */
+matchMedia('(prefers-color-scheme: light)').addEventListener('change', (ev) => {
+  if (!['light', 'dark'].includes(localStorage.getItem(THEME_KEY))) {
+    theme = ev.matches ? 'light' : 'dark';
+    applyTheme(theme);
+  }
+});
+
+/* ============================================================
    Events & init
    ============================================================ */
 
@@ -948,5 +982,14 @@ $('#btnReveal').addEventListener('click', () => { showScreen('result'); renderRe
 
 $('#btnAgain').addEventListener('click', playAgainSameCrew);
 $('#btnNewSetup').addEventListener('click', () => { showScreen('setup'); renderCategoryGrid(); });
+
+/* Offline support: register the service worker when served over
+   http(s). Opened directly from disk (file://) the game still works —
+   it has zero network dependencies. */
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
 
 applyLang();
