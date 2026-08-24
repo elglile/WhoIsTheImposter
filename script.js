@@ -41,19 +41,19 @@ const CATEGORIES = {
       { en: 'Lamborghini', ar: 'لامبورغيني', emoji: '🏎️', detail: { en: 'Italian luxury supercar maker', ar: 'شركة سيارات إيطالية خارقة فاخرة' } },
       { en: 'Mercedes-Benz', ar: 'مرسيدس', emoji: '🚗', detail: { en: 'German premium carmaker with the star logo', ar: 'شركة ألمانية فاخرة بشعار النجمة' } },
       { en: 'BMW', ar: 'بي إم دبليو', emoji: '🚘', detail: { en: 'German brand known as the ultimate driving machine', ar: 'علامة ألمانية تعرف بأفضل ماكينة قيادة' } },
-      { en: 'Tesla', ar: 'تسلا', emoji: '⚡', detail: { en: 'American pioneer of electric cars', ar: 'الرائدة الأمريكية في السيارات الكهربائية' } },
+      { en: 'Tesla', ar: 'تسلا', emoji: '⚡', w: 'Tesla, Inc.', detail: { en: 'American pioneer of electric cars', ar: 'الرائدة الأمريكية في السيارات الكهربائية' } },
       { en: 'Porsche', ar: 'بورشه', emoji: '🏎️', detail: { en: 'German luxury sports car factory', ar: 'مصنع السيارات الرياضية الألمانية الفاخرة' } },
       { en: 'Range Rover', ar: 'رينج روفر', emoji: '🚙', detail: { en: 'British luxury off-road SUV', ar: 'سيارة دفع رباعي بريطانية فاخرة' } },
       { en: 'Jeep', ar: 'جيب', emoji: '🚙', detail: { en: 'Rugged American SUV built for rough terrain', ar: 'سيارة أمريكية قوية للطرق الوعرة' } },
       { en: 'Ford Mustang', ar: 'فورد موستانج', emoji: '🏁', detail: { en: 'Classic American muscle car since 1964', ar: 'سيارة عضلات أمريكية كلاسيكية منذ 1964' } },
-      { en: 'VW Beetle', ar: 'فولكس فاجن بيتل', emoji: '🐞', detail: { en: 'German icon shaped like a little bug', ar: 'أيقونة ألمانية بشكل خنفساء صغيرة' } },
-      { en: 'Rolls-Royce', ar: 'رولز رويس', emoji: '👑', detail: { en: 'Ultra-luxury British limousine', ar: 'ليموزين بريطاني فائق الفخامة' } },
+      { en: 'VW Beetle', ar: 'فولكس فاجن بيتل', emoji: '🐞', w: 'Volkswagen Beetle', detail: { en: 'German icon shaped like a little bug', ar: 'أيقونة ألمانية بشكل خنفساء صغيرة' } },
+      { en: 'Rolls-Royce', ar: 'رولز رويس', emoji: '👑', w: 'Rolls-Royce Motor Cars', detail: { en: 'Ultra-luxury British limousine', ar: 'ليموزين بريطاني فائق الفخامة' } },
       { en: 'Toyota Corolla', ar: 'تويوتا كورولا', emoji: '🚗', detail: { en: 'Japan’s best-selling reliable sedan', ar: 'سيدان يابانية موثوقة الأكثر مبيعًا في العالم' } },
       { en: 'Honda Civic', ar: 'هوندا سيفيك', emoji: '🚗', detail: { en: 'Reliable compact car from Japan', ar: 'سيارة يابانية عملية وموثوقة' } },
       { en: 'Audi', ar: 'أودي', emoji: '🚘', detail: { en: 'German brand famous for its four rings', ar: 'علامة ألمانية مشهورة بحلقاتها الأربع' } },
       { en: 'Nissan GT-R', ar: 'نيسان جي تي آر', emoji: '🏁', detail: { en: 'Japanese supercar nicknamed Godzilla', ar: 'سيارة يابانية خارقة تلقب بغودزيلا' } },
-      { en: 'McLaren', ar: 'ماكلارين', emoji: '🏎️', detail: { en: 'British legend of Formula 1 racing', ar: 'أسطورة بريطانية في سباقات الفورمولا 1' } },
-      { en: 'Hyundai', ar: 'هيونداي', emoji: '🚗', detail: { en: 'South Korea’s biggest automaker', ar: 'أكبر شركة سيارات في كوريا الجنوبية' } },
+      { en: 'McLaren', ar: 'ماكلارين', emoji: '🏎️', w: 'McLaren Automotive', detail: { en: 'British legend of Formula 1 racing', ar: 'أسطورة بريطانية في سباقات الفورمولا 1' } },
+      { en: 'Hyundai', ar: 'هيونداي', emoji: '🚗', w: 'Hyundai Motor Company', detail: { en: 'South Korea’s biggest automaker', ar: 'أكبر شركة سيارات في كوريا الجنوبية' } },
       { en: 'Kia', ar: 'كيا', emoji: '🚗', detail: { en: 'South Korean car brand growing fast worldwide', ar: 'علامة سيارات كورية جنوبية تنمو عالميًا' } },
       { en: 'Fiat 500', ar: 'فيات 500', emoji: '🚗', detail: { en: 'Tiny Italian city car', ar: 'سيارة مدينة صغيرة جدًا من إيطاليا' } },
       { en: 'Chevrolet Silverado', ar: 'شفروليه سيلفرادو', emoji: '🛻', detail: { en: 'Big American pickup truck', ar: 'شاحنة بيك أب أمريكية كبيرة' } }
@@ -63,52 +63,52 @@ const CATEGORIES = {
     icon: '🌍',
     label: { en: 'Countries', ar: 'دول' },
     items: [
-      { en: 'Egypt', ar: 'مصر', emoji: '🇪🇬', detail: { en: 'North African land of the pyramids and the Nile', ar: 'بلاد الأهرام والنيل في شمال إفريقيا' } },
-      { en: 'Saudi Arabia', ar: 'السعودية', emoji: '🇸🇦', detail: { en: 'Arabian homeland of Islam’s two holy mosques', ar: 'موطن الحرمين الشريفين في جزيرة العرب' } },
-      { en: 'UAE', ar: 'الإمارات', emoji: '🇦🇪', detail: { en: 'Gulf federation that is home to Dubai', ar: 'اتحاد خليجي موطن دبي' } },
-      { en: 'Japan', ar: 'اليابان', emoji: '🇯🇵', detail: { en: 'Island nation of technology and samurai', ar: 'جزر التكنولوجيا والساموراي' } },
-      { en: 'France', ar: 'فرنسا', emoji: '🇫🇷', detail: { en: 'European home of Paris and the Eiffel Tower', ar: 'بلد باريس وبرج إيفل في أوروبا' } },
-      { en: 'Brazil', ar: 'البرازيل', emoji: '🇧🇷', detail: { en: 'South American giant of samba and football', ar: 'عملاق أمريكا الجنوبية للسامبا وكرة القدم' } },
-      { en: 'USA', ar: 'أمريكا', emoji: '🇺🇸', detail: { en: 'The United States, a union of 50 states', ar: 'الولايات المتحدة، اتحاد من 50 ولاية' } },
-      { en: 'Germany', ar: 'ألمانيا', emoji: '🇩🇪', detail: { en: 'European powerhouse famous for engineering', ar: 'القوة الأوروبية المشهورة بالمهندسين' } },
-      { en: 'Italy', ar: 'إيطاليا', emoji: '🇮🇹', detail: { en: 'Boot-shaped peninsula where Rome once ruled', ar: 'شبه جزيرة على شكل حذاء حكمتها روما قديمًا' } },
-      { en: 'Turkey', ar: 'تركيا', emoji: '🇹🇷', detail: { en: 'Country bridging Asia and Europe', ar: 'بلد يربط بين آسيا وأوروبا' } },
-      { en: 'Morocco', ar: 'المغرب', emoji: '🇲🇦', detail: { en: 'North African kingdom on the Atlantic coast', ar: 'مملكة شمال إفريقيا على ساحل الأطلسي' } },
-      { en: 'Qatar', ar: 'قطر', emoji: '🇶🇦', detail: { en: 'Small rich Gulf peninsula hosting the World Cup 2022', ar: 'شبه جزيرة خليجية غنية استضافت مونديال 2022' } },
-      { en: 'United Kingdom', ar: 'بريطانيا', emoji: '🇬🇧', detail: { en: 'Island kingdom ruled from London', ar: 'المملكة الجزرية التي تحكمها لندن' } },
-      { en: 'Spain', ar: 'إسبانيا', emoji: '🇪🇸', detail: { en: 'Iberian land of flamenco and bullfighting', ar: 'بلاد الفلامنكو ومصارعة الثيران' } },
-      { en: 'India', ar: 'الهند', emoji: '🇮🇳', detail: { en: 'Huge South Asian subcontinent of billions', ar: 'شبه قارة ضخمة يسكنها مليارات البشر' } },
-      { en: 'China', ar: 'الصين', emoji: '🇨🇳', detail: { en: 'The world’s most populous country', ar: 'أكثر دول العالم عددًا في السكان' } },
-      { en: 'Canada', ar: 'كندا', emoji: '🇨🇦', detail: { en: 'Vast maple land north of the USA', ar: 'مساحات القيقب الشاسعة شمال أمريكا' } },
-      { en: 'South Korea', ar: 'كوريا الجنوبية', emoji: '🇰🇷', detail: { en: 'Tech-savvy Asian nation behind K-pop', ar: 'بلد التكنولوجيا الآسيوي وموطن الكيبوب' } },
-      { en: 'Switzerland', ar: 'سويسرا', emoji: '🇨🇭', detail: { en: 'Alpine country of watches, banks and chocolate', ar: 'بلد الجبال والساعات والبنوك والشوكولاتة' } },
-      { en: 'Greece', ar: 'اليونان', emoji: '🇬🇷', detail: { en: 'Ancient cradle of philosophy and the Olympics', ar: 'المهد القديم للفلسفة والأولمبياد' } }
+      { en: 'Egypt', ar: 'مصر', emoji: '🇪🇬', iso: 'eg', detail: { en: 'North African land of the pyramids and the Nile', ar: 'بلاد الأهرام والنيل في شمال إفريقيا' } },
+      { en: 'Saudi Arabia', ar: 'السعودية', emoji: '🇸🇦', iso: 'sa', detail: { en: 'Arabian homeland of Islam’s two holy mosques', ar: 'موطن الحرمين الشريفين في جزيرة العرب' } },
+      { en: 'UAE', ar: 'الإمارات', emoji: '🇦🇪', iso: 'ae', detail: { en: 'Gulf federation that is home to Dubai', ar: 'اتحاد خليجي موطن دبي' } },
+      { en: 'Japan', ar: 'اليابان', emoji: '🇯🇵', iso: 'jp', detail: { en: 'Island nation of technology and samurai', ar: 'جزر التكنولوجيا والساموراي' } },
+      { en: 'France', ar: 'فرنسا', emoji: '🇫🇷', iso: 'fr', detail: { en: 'European home of Paris and the Eiffel Tower', ar: 'بلد باريس وبرج إيفل في أوروبا' } },
+      { en: 'Brazil', ar: 'البرازيل', emoji: '🇧🇷', iso: 'br', detail: { en: 'South American giant of samba and football', ar: 'عملاق أمريكا الجنوبية للسامبا وكرة القدم' } },
+      { en: 'USA', ar: 'أمريكا', emoji: '🇺🇸', iso: 'us', detail: { en: 'The United States, a union of 50 states', ar: 'الولايات المتحدة، اتحاد من 50 ولاية' } },
+      { en: 'Germany', ar: 'ألمانيا', emoji: '🇩🇪', iso: 'de', detail: { en: 'European powerhouse famous for engineering', ar: 'القوة الأوروبية المشهورة بالمهندسين' } },
+      { en: 'Italy', ar: 'إيطاليا', emoji: '🇮🇹', iso: 'it', detail: { en: 'Boot-shaped peninsula where Rome once ruled', ar: 'شبه جزيرة على شكل حذاء حكمتها روما قديمًا' } },
+      { en: 'Turkey', ar: 'تركيا', emoji: '🇹🇷', iso: 'tr', detail: { en: 'Country bridging Asia and Europe', ar: 'بلد يربط بين آسيا وأوروبا' } },
+      { en: 'Morocco', ar: 'المغرب', emoji: '🇲🇦', iso: 'ma', detail: { en: 'North African kingdom on the Atlantic coast', ar: 'مملكة شمال إفريقيا على ساحل الأطلسي' } },
+      { en: 'Qatar', ar: 'قطر', emoji: '🇶🇦', iso: 'qa', detail: { en: 'Small rich Gulf peninsula hosting the World Cup 2022', ar: 'شبه جزيرة خليجية غنية استضافت مونديال 2022' } },
+      { en: 'United Kingdom', ar: 'بريطانيا', emoji: '🇬🇧', iso: 'gb', detail: { en: 'Island kingdom ruled from London', ar: 'المملكة الجزرية التي تحكمها لندن' } },
+      { en: 'Spain', ar: 'إسبانيا', emoji: '🇪🇸', iso: 'es', detail: { en: 'Iberian land of flamenco and bullfighting', ar: 'بلاد الفلامنكو ومصارعة الثيران' } },
+      { en: 'India', ar: 'الهند', emoji: '🇮🇳', iso: 'in', detail: { en: 'Huge South Asian subcontinent of billions', ar: 'شبه قارة ضخمة يسكنها مليارات البشر' } },
+      { en: 'China', ar: 'الصين', emoji: '🇨🇳', iso: 'cn', detail: { en: 'The world’s most populous country', ar: 'أكثر دول العالم عددًا في السكان' } },
+      { en: 'Canada', ar: 'كندا', emoji: '🇨🇦', iso: 'ca', detail: { en: 'Vast maple land north of the USA', ar: 'مساحات القيقب الشاسعة شمال أمريكا' } },
+      { en: 'South Korea', ar: 'كوريا الجنوبية', emoji: '🇰🇷', iso: 'kr', detail: { en: 'Tech-savvy Asian nation behind K-pop', ar: 'بلد التكنولوجيا الآسيوي وموطن الكيبوب' } },
+      { en: 'Switzerland', ar: 'سويسرا', emoji: '🇨🇭', iso: 'ch', detail: { en: 'Alpine country of watches, banks and chocolate', ar: 'بلد الجبال والساعات والبنوك والشوكولاتة' } },
+      { en: 'Greece', ar: 'اليونان', emoji: '🇬🇷', iso: 'gr', detail: { en: 'Ancient cradle of philosophy and the Olympics', ar: 'المهد القديم للفلسفة والأولمبياد' } }
     ]
   },
   football: {
     icon: '⚽',
     label: { en: 'Football Players', ar: 'لاعبو كرة القدم' },
     items: [
-      { en: 'Lionel Messi', ar: 'ليونيل ميسي', emoji: '🇦🇷', detail: { en: 'Argentine legend who shined at Barcelona', ar: 'أسطورة الأرجنتين الذي تألق في برشلونة' } },
-      { en: 'Cristiano Ronaldo', ar: 'كريستيانو رونالدو', emoji: '🇵🇹', detail: { en: 'Portuguese star known around the world as CR7', ar: 'النجم البرتغالي المعروف عالميًا بـ CR7' } },
-      { en: 'Neymar Jr', ar: 'نيمار', emoji: '🇧🇷', detail: { en: 'Brazilian magician of dribbling skills', ar: 'ساحر المراوغة البرازيلي' } },
-      { en: 'Kylian Mbappé', ar: 'كيليان مبابي', emoji: '🇫🇷', detail: { en: 'French World Cup winner with lightning pace', ar: 'بطل العالم الفرنسي صاحب السرعة الخاطفة' } },
-      { en: 'Erling Haaland', ar: 'إيرلينغ هالاند', emoji: '🇳🇴', detail: { en: 'Norwegian goal-scoring machine', ar: 'آلة تسجيل الأهداف النرويجية' } },
-      { en: 'Mohamed Salah', ar: 'محمد صلاح', emoji: '🇪🇬', detail: { en: 'Egyptian king who rules Anfield', ar: 'ملك مصر الذي يحكم ملعب آنفيلد' } },
-      { en: 'Karim Benzema', ar: 'كريم بنزيما', emoji: '🇩🇿', detail: { en: 'French striker and Real Madrid legend', ar: 'الهداف الفرنسي وأسطورة ريال مدريد' } },
-      { en: 'Luka Modrić', ar: 'لوكا مودريتش', emoji: '🇭🇷', detail: { en: 'Croatian midfield maestro', ar: 'ساحر وسط الملعب الكرواتي' } },
-      { en: 'Pelé', ar: 'بيليه', emoji: '🇧🇷', detail: { en: 'Brazilian icon who won three World Cups', ar: 'البرازيلي الذي رفع ثلاث مونديالات' } },
-      { en: 'Diego Maradona', ar: 'دييغو مارادونا', emoji: '🇦🇷', detail: { en: 'Argentine genius of the 1986 World Cup', ar: 'عبقري الأرجنتين في مونديال 1986' } },
-      { en: 'Zinedine Zidane', ar: 'زين الدين زيدان', emoji: '🇫🇷', detail: { en: 'Elegant French playmaker and later coach', ar: 'صانع الألعاب الفرنسي الأنيق ومدرب لاحقًا' } },
-      { en: 'Ronaldinho', ar: 'رونالدينيو', emoji: '🇧🇷', detail: { en: 'Smiling Brazilian who played with joy', ar: 'البرازيلي المبتسم الذي لعب بمرح' } },
-      { en: 'Harry Kane', ar: 'هاري كين', emoji: '🇬🇧', detail: { en: 'England captain and clinical finisher', ar: 'قائد المنتخب الإنجليزي وقناص المناطق' } },
-      { en: 'Kevin De Bruyne', ar: 'كيفن دي بروين', emoji: '🇧🇪', detail: { en: 'Belgian king of assists', ar: 'ملك التمريرات الحاسمة البلجيكي' } },
-      { en: 'Vinícius Jr', ar: 'فينيسيوس جونيور', emoji: '🇧🇷', detail: { en: 'Real Madrid’s dazzling Brazilian winger', ar: 'الجناح البرازيلي اللامع في ريال مدريد' } },
-      { en: 'Jude Bellingham', ar: 'جود بيلينجهام', emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', detail: { en: 'Young English midfield superstar', ar: 'نجم خط الوسط الإنجليزي الشاب' } },
-      { en: 'Sadio Mané', ar: 'ساديو ماني', emoji: '🇸🇳', detail: { en: 'Senegalese winger famous for speed', ar: 'جناح السنغال المشهور بسرعته' } },
-      { en: 'Riyad Mahrez', ar: 'رياض محرز', emoji: '🇩🇿', detail: { en: 'Algerian wizard of Manchester City', ar: 'ساحر الجزائر في مانشستر سيتي' } },
-      { en: 'Robert Lewandowski', ar: 'روبرت ليفاندوفسكي', emoji: '🇵🇱', detail: { en: 'Polish striker with a scoring machine', ar: 'الهداف البولندي صاحب الأرقام القياسية' } },
-      { en: 'Eden Hazard', ar: 'إيدن هازارد', emoji: '🇧🇪', detail: { en: 'Belgian winger famed for his Chelsea years', ar: 'الجناح البلجيكي المشهور سنواته في تشيلسي' } }
+      { en: 'Lionel Messi', ar: 'ليونيل ميسي', emoji: '🇦🇷', iso: 'ar', detail: { en: 'Argentine legend who shined at Barcelona', ar: 'أسطورة الأرجنتين الذي تألق في برشلونة' } },
+      { en: 'Cristiano Ronaldo', ar: 'كريستيانو رونالدو', emoji: '🇵🇹', iso: 'pt', detail: { en: 'Portuguese star known around the world as CR7', ar: 'النجم البرتغالي المعروف عالميًا بـ CR7' } },
+      { en: 'Neymar Jr', ar: 'نيمار', emoji: '🇧🇷', iso: 'br', detail: { en: 'Brazilian magician of dribbling skills', ar: 'ساحر المراوغة البرازيلي' } },
+      { en: 'Kylian Mbappé', ar: 'كيليان مبابي', emoji: '🇫🇷', iso: 'fr', detail: { en: 'French World Cup winner with lightning pace', ar: 'بطل العالم الفرنسي صاحب السرعة الخاطفة' } },
+      { en: 'Erling Haaland', ar: 'إيرلينغ هالاند', emoji: '🇳🇴', iso: 'no', detail: { en: 'Norwegian goal-scoring machine', ar: 'آلة تسجيل الأهداف النرويجية' } },
+      { en: 'Mohamed Salah', ar: 'محمد صلاح', emoji: '🇪🇬', iso: 'eg', detail: { en: 'Egyptian king who rules Anfield', ar: 'ملك مصر الذي يحكم ملعب آنفيلد' } },
+      { en: 'Karim Benzema', ar: 'كريم بنزيما', emoji: '🇩🇿', iso: 'dz', detail: { en: 'French striker and Real Madrid legend', ar: 'الهداف الفرنسي وأسطورة ريال مدريد' } },
+      { en: 'Luka Modrić', ar: 'لوكا مودريتش', emoji: '🇭🇷', iso: 'hr', detail: { en: 'Croatian midfield maestro', ar: 'ساحر وسط الملعب الكرواتي' } },
+      { en: 'Pelé', ar: 'بيليه', emoji: '🇧🇷', iso: 'br', detail: { en: 'Brazilian icon who won three World Cups', ar: 'البرازيلي الذي رفع ثلاث مونديالات' } },
+      { en: 'Diego Maradona', ar: 'دييغو مارادونا', emoji: '🇦🇷', iso: 'ar', detail: { en: 'Argentine genius of the 1986 World Cup', ar: 'عبقري الأرجنتين في مونديال 1986' } },
+      { en: 'Zinedine Zidane', ar: 'زين الدين زيدان', emoji: '🇫🇷', iso: 'fr', detail: { en: 'Elegant French playmaker and later coach', ar: 'صانع الألعاب الفرنسي الأنيق ومدرب لاحقًا' } },
+      { en: 'Ronaldinho', ar: 'رونالدينيو', emoji: '🇧🇷', iso: 'br', detail: { en: 'Smiling Brazilian who played with joy', ar: 'البرازيلي المبتسم الذي لعب بمرح' } },
+      { en: 'Harry Kane', ar: 'هاري كين', emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', iso: 'gb-eng', detail: { en: 'England captain and clinical finisher', ar: 'قائد المنتخب الإنجليزي وقناص المناطق' } },
+      { en: 'Kevin De Bruyne', ar: 'كيفن دي بروين', emoji: '🇧🇪', iso: 'be', detail: { en: 'Belgian king of assists', ar: 'ملك التمريرات الحاسمة البلجيكي' } },
+      { en: 'Vinícius Jr', ar: 'فينيسيوس جونيور', emoji: '🇧🇷', iso: 'br', w: 'Vinícius Júnior', detail: { en: 'Real Madrid’s dazzling Brazilian winger', ar: 'الجناح البرازيلي اللامع في ريال مدريد' } },
+      { en: 'Jude Bellingham', ar: 'جود بيلينجهام', emoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', iso: 'gb-eng', detail: { en: 'Young English midfield superstar', ar: 'نجم خط الوسط الإنجليزي الشاب' } },
+      { en: 'Sadio Mané', ar: 'ساديو ماني', emoji: '🇸🇳', iso: 'sn', detail: { en: 'Senegalese winger famous for speed', ar: 'جناح السنغال المشهور بسرعته' } },
+      { en: 'Riyad Mahrez', ar: 'رياض محرز', emoji: '🇩🇿', iso: 'dz', detail: { en: 'Algerian wizard of Manchester City', ar: 'ساحر الجزائر في مانشستر سيتي' } },
+      { en: 'Robert Lewandowski', ar: 'روبرت ليفاندوفسكي', emoji: '🇵🇱', iso: 'pl', detail: { en: 'Polish striker with a scoring machine', ar: 'الهداف البولندي صاحب الأرقام القياسية' } },
+      { en: 'Eden Hazard', ar: 'إيدن هازارد', emoji: '🇧🇪', iso: 'be', detail: { en: 'Belgian winger famed for his Chelsea years', ar: 'الجناح البلجيكي المشهور سنواته في تشيلسي' } }
     ]
   },
   animals: {
@@ -141,7 +141,7 @@ const CATEGORIES = {
     icon: '🎬',
     label: { en: 'Movies', ar: 'أفلام' },
     items: [
-      { en: 'Titanic', ar: 'تيتانيك', emoji: '🚢', detail: { en: 'Romance aboard the ship that sank in 1912', ar: 'قصة حب على متن السفينة التي غرقت عام 1912' } },
+      { en: 'Titanic', ar: 'تيتانيك', emoji: '🚢', w: 'Titanic (1997 film)', detail: { en: 'Romance aboard the ship that sank in 1912', ar: 'قصة حب على متن السفينة التي غرقت عام 1912' } },
       { en: 'Avatar', ar: 'أفانتار', emoji: '🌳', detail: { en: 'Blue aliens defending their moon Pandora', ar: 'كائنات زرقاء تدافع عن قمر باندورا' } },
       { en: 'The Lion King', ar: 'الأسد الملك', emoji: '🦁', detail: { en: 'Animated tale of the lion cub Simba', ar: 'حكاية متحركة عن شبل الأسد سيمبا' } },
       { en: 'Inception', ar: 'بداية', emoji: '🌀', detail: { en: 'Thieves stealing ideas from dreams', ar: 'لصوص يسرقون الأفكار من داخل الأحلام' } },
@@ -151,7 +151,7 @@ const CATEGORIES = {
       { en: 'Spider-Man', ar: 'الرجل العنكبوت', emoji: '🕷️', detail: { en: 'Teen hero swinging webs through New York', ar: 'فتى بطل يتأرجح بخيوط العنكبوت في نيويورك' } },
       { en: 'Harry Potter', ar: 'هاري بوتر', emoji: '⚡', detail: { en: 'Young wizard studying at Hogwarts', ar: 'ساحر صغير يدرس في مدرسة هوغوورتس' } },
       { en: 'Toy Story', ar: 'قصة لعبة', emoji: '🤠', detail: { en: 'Toys secretly come alive when humans leave', ar: 'ألعاب تنبض سرًا بالحياة حين يغادر البشر' } },
-      { en: 'Interstellar', ar: 'بين النجوم', emoji: '🚀', detail: { en: 'Astronauts searching space for a new Earth', ar: 'رواد فضاء يبحثون في الفلك عن أرض جديدة' } },
+      { en: 'Interstellar', ar: 'بين النجوم', emoji: '🚀', w: 'Interstellar (film)', detail: { en: 'Astronauts searching space for a new Earth', ar: 'رواد فضاء يبحثون في الفلك عن أرض جديدة' } },
       { en: 'The Godfather', ar: 'العراب', emoji: '🎩', detail: { en: 'Epic saga of an Italian mafia family', ar: 'ملحمة عائلة المافيا الإيطالية' } },
       { en: 'Finding Nemo', ar: 'في بحث عن نيمو', emoji: '🐠', detail: { en: 'Clownfish dad crossing the ocean for his son', ar: 'أب سمكة يعبر المحيط بحثًا عن ابنه' } },
       { en: 'Fast & Furious', ar: 'السريع والغاضب', emoji: '🏎️', detail: { en: 'Street racers whose crew became family', ar: 'متسابقو الشوارع الذين أصبحوا عائلة' } },
@@ -167,13 +167,13 @@ const CATEGORIES = {
     icon: '📱',
     label: { en: 'Brands', ar: 'علامات تجارية' },
     items: [
-      { en: 'Apple', ar: 'أبل', emoji: '🍎', detail: { en: 'Maker of the iPhone from California', ar: 'صانعة الآيفون من كاليفورنيا' } },
-      { en: 'Nike', ar: 'نايكي', emoji: '✔️', detail: { en: 'Sportswear giant with the swoosh logo', ar: 'عملاق الملابس الرياضية بشعار السوش' } },
+      { en: 'Apple', ar: 'أبل', emoji: '🍎', w: 'Apple Inc.', detail: { en: 'Maker of the iPhone from California', ar: 'صانعة الآيفون من كاليفورنيا' } },
+      { en: 'Nike', ar: 'نايكي', emoji: '✔️', w: 'Nike, Inc.', detail: { en: 'Sportswear giant with the swoosh logo', ar: 'عملاق الملابس الرياضية بشعار السوش' } },
       { en: 'Adidas', ar: 'أديداس', emoji: '👟', detail: { en: 'German sportswear brand with three stripes', ar: 'علامة رياضية ألمانية بخطوطها الثلاثة' } },
       { en: 'Samsung', ar: 'سامسونج', emoji: '📱', detail: { en: 'South Korean electronics empire', ar: 'إمبراطورية الإلكترونيات الكورية الجنوبية' } },
       { en: 'Coca-Cola', ar: 'كوكا كولا', emoji: '🥤', detail: { en: 'World-famous fizzy drink in a red can', ar: 'المشروب الغازي الشهير بالعلبة الحمراء' } },
       { en: "McDonald's", ar: 'ماكدونالدز', emoji: '🍟', detail: { en: 'Fast-food chain with golden arches', ar: 'سلسلة الوجبات السريعة بأقواسها الذهبية' } },
-      { en: 'Amazon', ar: 'أمازون', emoji: '📦', detail: { en: 'Giant online store delivering everything', ar: 'المتجر الإلكتروني العملاق الذي يوصّل كل شيء' } },
+      { en: 'Amazon', ar: 'أمازون', emoji: '📦', w: 'Amazon (company)', detail: { en: 'Giant online store delivering everything', ar: 'المتجر الإلكتروني العملاق الذي يوصّل كل شيء' } },
       { en: 'Google', ar: 'جوجل', emoji: '🔍', detail: { en: 'The search engine everyone asks questions', ar: 'محرك البحث الذي يسأله الجميع كل شيء' } },
       { en: 'Starbucks', ar: 'ستاربكس', emoji: '☕', detail: { en: 'Coffee chain born in Seattle', ar: 'سلسلة القهوة التي وُلدت في سياتل' } },
       { en: 'IKEA', ar: 'ايكيا', emoji: '🪑', detail: { en: 'Swedish furniture you assemble yourself', ar: 'أثاث سويدي تركبه بنفسك' } },
@@ -183,7 +183,7 @@ const CATEGORIES = {
       { en: 'Disney', ar: 'ديزني', emoji: '🏰', detail: { en: 'Magic castle of cartoons and theme parks', ar: 'قلعة السحر للكرتون والمدن الترفيهية' } },
       { en: 'Sony', ar: 'سوني', emoji: '🎮', detail: { en: 'Japanese giant behind PlayStation', ar: 'العملاق الياباني صاحب بلايستيشن' } },
       { en: 'Netflix', ar: 'نتفليكس', emoji: '🍿', detail: { en: 'Streaming app full of series and films', ar: 'تطبيق البث المليء بالمسلسلات والأفلام' } },
-      { en: 'Zara', ar: 'زارا', emoji: '👗', detail: { en: 'Spanish fast-fashion clothing store', ar: 'متجر الملابس الإسباني السريع الموضة' } },
+      { en: 'Zara', ar: 'زارا', emoji: '👗', w: 'Zara (retailer)', detail: { en: 'Spanish fast-fashion clothing store', ar: 'متجر الملابس الإسباني السريع الموضة' } },
       { en: 'Puma', ar: 'بوما', emoji: '🐆', detail: { en: 'German sport brand named after the wild cat', ar: 'علامة رياضية ألمانية تحمل اسم القط البري' } },
       { en: 'Chanel', ar: 'شانيل', emoji: '💄', detail: { en: 'French luxury perfume and fashion house', ar: 'دار العطور والأزياء الفرنسية الفاخرة' } },
       { en: 'Red Bull', ar: 'ريد بول', emoji: '🐂', detail: { en: 'Energy drink that “gives you wings”', ar: 'مشروب الطاقة الذي يمنحك الأجنحة' } }
@@ -228,14 +228,14 @@ const CATEGORIES = {
       { en: 'The Witcher', ar: 'الويتشر', emoji: '🗡️', detail: { en: 'Monster hunter earning coin in a dark world', ar: 'صائد وحوش يجني المال في عالم مظلم' } },
       { en: 'Prison Break', ar: 'الهرب من السجن', emoji: '⛓️', detail: { en: 'Brother plans an elaborate prison escape', ar: 'أخ يؤمّر لهروب محكم من السجن' } },
       { en: 'Peaky Blinders', ar: 'بيكي بليندرز', emoji: '🎩', detail: { en: 'Birmingham gangster family after WWI', ar: 'عائلة عصابات في برمنجهام بعد الحرب العالمية الأولى' } },
-      { en: 'Dark', ar: 'دارك', emoji: '🕳️', detail: { en: 'Time-travel mysteries in a small German town', ar: 'أسرار سفر عبر الزمن في بلدة ألمانية صغيرة' } },
+      { en: 'Dark', ar: 'دارك', emoji: '🕳️', w: 'Dark (German TV series)', detail: { en: 'Time-travel mysteries in a small German town', ar: 'أسرار سفر عبر الزمن في بلدة ألمانية صغيرة' } },
       { en: 'The Office', ar: 'ذا أوفيس', emoji: '📎', detail: { en: 'Funny fake documentary about office life', ar: 'كوميديا وثائقية ساخرة عن حياة المكتب' } },
-      { en: 'Sherlock', ar: 'شيرلوك', emoji: '🔎', detail: { en: 'The famous detective solving crimes in modern London', ar: 'المحقق الشهير يحل الجرائم في لندن الحديثة' } },
+      { en: 'Sherlock', ar: 'شيرلوك', emoji: '🔎', w: 'Sherlock (TV series)', detail: { en: 'The famous detective solving crimes in modern London', ar: 'المحقق الشهير يحل الجرائم في لندن الحديثة' } },
       { en: 'Black Mirror', ar: 'المرآة السوداء', emoji: '📱', detail: { en: 'Dark standalone tales about technology', ar: 'حكايات مستقلة مظلمة عن التكنولوجيا' } },
-      { en: 'Wednesday', ar: 'ونزداي', emoji: '🖤', detail: { en: 'Addams girl solving mysteries at her school', ar: 'ابنة عائلة آدامز تحل ألغاز مدرستها الغريبة' } },
+      { en: 'Wednesday', ar: 'ونزداي', emoji: '🖤', w: 'Wednesday (TV series)', detail: { en: 'Addams girl solving mysteries at her school', ar: 'ابنة عائلة آدامز تحل ألغاز مدرستها الغريبة' } },
       { en: 'Better Call Saul', ar: 'بتر كول سول', emoji: '⚖️', detail: { en: 'Story of the lawyer before Breaking Bad', ar: 'قصة المحامي قبل أحداث بريكينغ باد' } },
       { en: 'Narcos', ar: 'ناركوس', emoji: '🕵️', detail: { en: 'The hunt for Colombia’s drug lords', ar: 'مطاردة كبار تجار المخدرات في كولومبيا' } },
-      { en: 'The Crown', ar: 'التاج', emoji: '👑', detail: { en: 'The story of Britain’s royal family', ar: 'قصة العائلة المالكة البريطانية' } },
+      { en: 'The Crown', ar: 'التاج', emoji: '👑', w: 'The Crown (TV series)', detail: { en: 'The story of Britain’s royal family', ar: 'قصة العائلة المالكة البريطانية' } },
       { en: 'Mr. Robot', ar: 'مستر روبوت', emoji: '💻', detail: { en: 'Hacker fighting giant corporations by night', ar: 'هاكر يقاوم الشركات الكبرى ليلاً' } },
       { en: 'Bab Al Hara', ar: 'باب الحارة', emoji: '🕌', detail: { en: 'Drama set in an old Damascus neighborhood', ar: 'دراما في حارة دمشقية قديمة' } },
       { en: 'The Rumor', ar: 'الشائعة', emoji: '🗣️', detail: { en: 'Drama about gossip spreading through a community', ar: 'دراما عن إشاعة تتسرب بين أهل الحي' } }
@@ -247,15 +247,15 @@ const CATEGORIES = {
     items: [
       { en: 'Spider-Man', ar: 'سبايدرمان', emoji: '🕷️', detail: { en: 'Teen hero swinging webs across New York', ar: 'بطل فتى يتأرجح بخيوطه عبر نيويورك' } },
       { en: 'Iron Man', ar: 'آيرون مان', emoji: '🦾', detail: { en: 'Billionaire genius in a high-tech flying suit', ar: 'ملياردير عبقري ببدلة طائرة تقنية' } },
-      { en: 'Thor', ar: 'ثور', emoji: '🔨', detail: { en: 'Norse god wielding the mighty hammer Mjölnir', ar: 'إله الأساطير النوردية بمطرقة ميولنير العظيمة' } },
-      { en: 'Black Panther', ar: 'البانثر الأسود', emoji: '🐆', detail: { en: 'King and protector of Wakanda', ar: 'ملك واكاندا وحاميها' } },
+      { en: 'Thor', ar: 'ثور', emoji: '🔨', w: 'Thor (Marvel Cinematic Universe)', detail: { en: 'Norse god wielding the mighty hammer Mjölnir', ar: 'إله الأساطير النوردية بمطرقة ميولنير العظيمة' } },
+      { en: 'Black Panther', ar: 'البانثر الأسود', emoji: '🐆', w: 'Black Panther (character)', detail: { en: 'King and protector of Wakanda', ar: 'ملك واكاندا وحاميها' } },
       { en: 'Captain America', ar: 'كابتن أمريكا', emoji: '🛡️', detail: { en: 'Super soldier with an unbreakable round shield', ar: 'جندي خارق بدرعه المستدير الذي لا ينكسر' } },
       { en: 'Hulk', ar: 'هالك', emoji: '💪', detail: { en: 'Scientist turning into a giant green rage monster', ar: 'عالم يتحول لعملاق أخضر غاضب' } },
       { en: 'Batman', ar: 'باتمان', emoji: '🦇', detail: { en: 'Millionaire vigilante guarding Gotham at night', ar: 'مليونيري يحمي غوثام تحت جنح الليل' } },
       { en: 'Superman', ar: 'سوبرمان', emoji: '🦸', detail: { en: 'Caped hero from the destroyed planet Krypton', ar: 'البطل المغطى القادم من كوكب كريبتون المدمَّر' } },
       { en: 'Wonder Woman', ar: 'المرأة المعجزة', emoji: '⚔️', detail: { en: 'Amazon warrior princess with a magic lasso', ar: 'أميرة محاربة من الأمازون بسوطها السحري' } },
       { en: 'The Flash', ar: 'ذا فلاش', emoji: '⚡', detail: { en: 'Fastest man alive in a red suit', ar: 'أسرع إنسان على قيد الحياة بالبدلة الحمراء' } },
-      { en: 'Joker', ar: 'الجوكر', emoji: '🤡', detail: { en: 'Gotham’s laughing clown villain', ar: 'شرير غوثام الضاحك بمظهر المهرج' } },
+      { en: 'Joker', ar: 'الجوكر', emoji: '🤡', w: 'Joker (character)', detail: { en: 'Gotham’s laughing clown villain', ar: 'شرير غوثام الضاحك بمظهر المهرج' } },
       { en: 'Deadpool', ar: 'ديدبول', emoji: '🗡️', detail: { en: 'Mercenary cracking jokes with twin swords', ar: 'قاتل مأجور مرح بسيفين توأم' } },
       { en: 'Wolverine', ar: 'وولفرين', emoji: '🐺', detail: { en: 'Mutant with metal claws bursting from his hands', ar: 'متحوّل بمخالب معدنية تنبثق من يديه' } },
       { en: 'Aquaman', ar: 'أكوامان', emoji: '🌊', detail: { en: 'King who commands all creatures of the sea', ar: 'الملك الذي يأتمر بمخلوقات البحر كلها' } },
@@ -284,7 +284,7 @@ const CATEGORIES = {
       { en: 'Ibn Battuta', ar: 'ابن بطوطة', emoji: '🧭', detail: { en: 'History’s greatest Muslim traveler', ar: 'أعظم رحالة في التاريخ الإسلامي' } },
       { en: 'Alexander the Great', ar: 'الإسكندر المقدوني', emoji: '🛡️', detail: { en: 'Young Macedonian who conquered the ancient world', ar: 'الفتى المقدوني الذي غزا العالم القديم' } },
       { en: 'Winston Churchill', ar: 'وينستون تشرشل', emoji: '🇬🇧', detail: { en: 'Britain’s prime minister during WWII', ar: 'رئيس وزراء بريطانيا في الحرب العالمية الثانية' } },
-      { en: 'Queen Elizabeth II', ar: 'الملكة إليزابيث الثانية', emoji: '👸', detail: { en: 'Britain’s longest-reigning queen', ar: 'أطول ملكات بريطانيا مدة حكمًا' } },
+      { en: 'Queen Elizabeth II', ar: 'الملكة إليزابيث الثانية', emoji: '👸', w: 'Elizabeth II', detail: { en: 'Britain’s longest-reigning queen', ar: 'أطول ملكات بريطانيا مدة حكمًا' } },
       { en: 'Genghis Khan', ar: 'جنكيز خان', emoji: '🐎', detail: { en: 'Mongol conqueror who united the steppes', ar: 'فاتح المغول الذي وحّد السهوب' } }
     ]
   }
@@ -500,6 +500,89 @@ function decodeSecret(encoded) {
   return JSON.parse(new TextDecoder().decode(bytes));
 }
 
+/* ------------------------------------------------------------
+   Element imagery.
+   Countries show their real flag (flagcdn.com). Everyone else
+   tries a real photo via the Wikipedia article thumbnail API,
+   fetched once per round with a short timeout and cached in
+   localStorage. Any failure (offline, missing page) silently
+   falls back to the emoji.
+   ------------------------------------------------------------ */
+const FLAG_CDN = 'https://flagcdn.com/w320/';
+const WIKI_SKIP = new Set(['activities']); // emoji says it best
+
+let thumbCache = {};
+try { thumbCache = JSON.parse(localStorage.getItem('imposter-thumbs') || '{}'); } catch (_) {}
+
+function saveThumbs() {
+  try {
+    const keys = Object.keys(thumbCache);
+    if (keys.length > 400) keys.slice(0, keys.length - 400).forEach((k) => delete thumbCache[k]);
+    localStorage.setItem('imposter-thumbs', JSON.stringify(thumbCache));
+  } catch (_) {}
+}
+
+function fetchWithTimeout(url, ms) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), ms);
+  return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(timer));
+}
+
+async function wikiThumb(title) {
+  if (!title) return null;
+  if (thumbCache[title] !== undefined) return thumbCache[title];
+  let url = null;
+  try {
+    const res = await fetchWithTimeout(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`,
+      3000
+    );
+    if (res.ok) {
+      const data = await res.json();
+      // upgrade tiny thumbs (e.g. 40px) to a crisp 320px rendition
+      url = data?.thumbnail?.source?.replace(/\/\d+px-/, '/320px-') || null;
+    } else {
+      thumbCache[title] = null; // page missing — remember so we don't retry
+      saveThumbs();
+      return null;
+    }
+  } catch (_) {
+    return null; // offline / transient — not cached, retried next round
+  }
+  thumbCache[title] = url;
+  saveThumbs();
+  return url;
+}
+
+function resolveVisual(item, catKey) {
+  return (async () => {
+    if (catKey === 'countries' && item.iso) return { img: FLAG_CDN + item.iso + '.png' };
+    if (!WIKI_SKIP.has(catKey)) {
+      const url = await wikiThumb(item.w || item.en);
+      if (url) return { img: url };
+    }
+    if (item.iso) return { img: FLAG_CDN + item.iso + '.png' }; // player nationality flag
+    return { emoji: item.emoji };
+  })();
+}
+
+function paintVisual(container, item, visual) {
+  container.textContent = '';
+  if (visual.img) {
+    const im = document.createElement('img');
+    im.className = 'visual-img';
+    im.alt = item[lang] || item.en;
+    im.referrerPolicy = 'no-referrer';
+    im.addEventListener('error', () => {
+      if (container.isConnected) container.textContent = item.emoji;
+    });
+    im.src = visual.img;
+    container.appendChild(im);
+  } else {
+    container.textContent = visual.emoji;
+  }
+}
+
 function t(key) {
   return STRINGS[lang][key] ?? STRINGS.en[key];
 }
@@ -610,6 +693,13 @@ function assignRolesAndElement() {
     k: rand(HINTS[state.catKey].length) // pre-picked hint (stable per round)
   });
   state.votes = state.names.map(() => 0);
+
+  // start fetching the real image while players pass the device
+  state.roundId = (state.roundId || 0) + 1;
+  const roundId = state.roundId;
+  state.visual = null;
+  state.visualPromise = resolveVisual(element, state.catKey)
+    .then((v) => { if (state.roundId === roundId) state.visual = v; return v; });
 }
 
 function startRound() {
@@ -690,7 +780,15 @@ function renderCardText() {
   const detailEl = $('#cardDetail');
 
   if (!isImposter) {
-    $('#cardVisual').textContent = element.emoji;
+    const visEl = $('#cardVisual');
+    paintVisual(visEl, element, state.visual || { emoji: element.emoji });
+    // image still loading? swap it in the moment it arrives
+    if (!state.visual && state.visualPromise) {
+      const rid = state.roundId;
+      state.visualPromise.then((v) => {
+        if (rid === state.roundId && v.img && visEl.isConnected) paintVisual(visEl, element, v);
+      });
+    }
     $('#cardLead').textContent = t('secretIs');
     $('#cardItemName').textContent = element[lang];
     $('#cardItemName').classList.remove('hidden');
@@ -868,7 +966,14 @@ function renderResult() {
   $('#resultImposter').textContent = state.names[imposterIndex];
   $('#resultCatChip').textContent =
     `${CATEGORIES[state.catKey].icon} ${catLabel(state.catKey)}`;
-  $('#resultElementEmoji').textContent = element.emoji;
+  const resEl = $('#resultElementEmoji');
+  paintVisual(resEl, element, state.visual || { emoji: element.emoji });
+  if (!state.visual && state.visualPromise) {
+    const rid = state.roundId;
+    state.visualPromise.then((v) => {
+      if (rid === state.roundId && v.img) paintVisual(resEl, element, v);
+    });
+  }
   $('#resultElementName').textContent = element[lang];
   $('#resultElementDetail').textContent = element.detail[lang];
 
